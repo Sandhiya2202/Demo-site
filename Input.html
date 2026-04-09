@@ -1,0 +1,36 @@
+<h2>User Details Form</h2>
+
+<form onsubmit="handleForm(event)">
+  <label>Age:</label><br>
+  <input type="number" id="age" placeholder="Enter age" required><br><br>
+
+  <label>Date of Birth:</label><br>
+  <input type="date" id="dob" required><br><br>
+
+  <label>Height (cm):</label><br>
+  <input type="number" id="height" placeholder="Enter height" required><br><br>
+
+  <label>Weight (kg):</label><br>
+  <input type="number" id="weight" placeholder="Enter weight" required><br><br>
+
+  <button type="submit">Submit</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+  function handleForm(event) {
+    event.preventDefault();
+
+    const age = document.getElementById("age").value;
+    const dob = document.getElementById("dob").value;
+    const height = document.getElementById("height").value;
+    const weight = document.getElementById("weight").value;
+
+    document.getElementById("result").innerText =
+      "Age: " + age +
+      ", DOB: " + dob +
+      ", Height: " + height +
+      " cm, Weight: " + weight + " kg";
+  }
+</script>
