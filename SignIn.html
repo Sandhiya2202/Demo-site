@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SIGN IN</title>
+    </head>
+    <body>
+        <h1>Sign In</h1>
+        <form onsubmit="login(event)">
+            <label for="Email">Email:</label>
+            <input type="text" id="email" placeholder="Enter Email" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter Password" required><br><br>
+            <button type="submit"> Submit</button> 
+        </form>
+        <p1 id="message"></p1>
+        <script>
+            function login(event) {
+                event.preventDefault();
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+                if (email === "user@email.com" && password === "password") {
+                    document.getElementById("message").textContent = "Login successful!";
+                } else {
+                    document.getElementById("message").textContent = "Invalid email or password.";
+                }
+            }
+        </script>
+    </body>
+</html>
